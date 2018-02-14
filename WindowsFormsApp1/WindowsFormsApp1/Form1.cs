@@ -97,5 +97,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Response.Redirect("Form2.cs");
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
     }
 }
