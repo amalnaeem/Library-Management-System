@@ -35,12 +35,21 @@ namespace WindowsFormsApp1
 
 
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
-                OleDbDataReader dr = cmd.ExecuteReader();
-
+                //OleDbDataReader dr = cmd.ExecuteReader();
+                var dr = cmd.ExecuteReader();
 
                 if (dr.Read() == true)
                 {
-                    MessageBox.Show("Login Successful");
+                     MessageBox.Show("Login Successful" );
+
+                    // MessageBox.Show(dr[0].ToString());
+                     this.Hide();
+                    //Form3 f3 = new Form3();
+                    //f3.Show();
+                    //this.Hide();
+                    Form4 f4 = new Form4();
+                    f4.Show();
+
                 }
                 else
                 {
